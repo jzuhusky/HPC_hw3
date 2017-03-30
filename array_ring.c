@@ -41,7 +41,7 @@ int main(int argc, char **argv){
 			get_timestamp(&time2);
 			avgRTT += timestamp_diff_in_seconds(time1,time2);
 		}
-		avgRTT = avgRTT / N;
+		avgRTT = avgRTT / N / 2.0;
 		printf("%f %f %f \n",numberOfInts*sizeof(int)*0.000001,avgRTT, numberOfInts*sizeof(int)*0.000001/avgRTT);
 		
 	}else{

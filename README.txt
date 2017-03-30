@@ -1,4 +1,10 @@
-
+QUICK-NOTE: The image labeled DataRate.png
+-> The units are incorrect (only slightly)
+-> The data for MB/sec is too large by a factor of 2!!
+-> When running the code, I forgot to account
+-> for the fact that I was recording the time taken
+-> to send data over and back. Therefore, the max dataRate
+-> between crunchy1/3 maxes out around 1GByte/sec
 
 Joe Zuhusky:
 
