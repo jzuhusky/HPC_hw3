@@ -39,8 +39,6 @@ int main(int argc, char **argv){
 			MPI_Send(message_out, numberOfInts, MPI_INT, destination, tag, MPI_COMM_WORLD);
 			MPI_Recv(message_in,  numberOfInts, MPI_INT, origin, tag, MPI_COMM_WORLD, &status); // Blocking 
 			get_timestamp(&time2);
-			//printf("Rank %d on Host %s Sending Over 2MByte array | Time Stamp: %f\n",rank,hostname,timestamp_diff_in_seconds(time1,time2));
-			//printf("%f\n",timestamp_diff_in_seconds(time1,time2));
 			avgRTT += timestamp_diff_in_seconds(time1,time2);
 		}
 		avgRTT = avgRTT / N;
@@ -52,8 +50,6 @@ int main(int argc, char **argv){
 		while  ( currentLoop < N){
 			MPI_Recv(message_in,  numberOfInts, MPI_INT, origin, tag, MPI_COMM_WORLD, &status); // Blocking 
 			MPI_Send(message_out, numberOfInts, MPI_INT, destination, tag, MPI_COMM_WORLD);
-			get_timestamp(&time2);
-	//		printf("Rank %d on Host %s Sending Over 2MByte array | Time Stamp: %d \n",rank,hostname,time2);
 			currentLoop++;
 		}
 	}
