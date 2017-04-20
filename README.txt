@@ -28,20 +28,13 @@ mpirun {INPUT YOUR OWN FLAGS HERE} ./int_array.run #loops #sizeOfIntegerArrayToS
 Final project pitch:
 
 I'll be experimenting with parallel implementations of the
-Multigrid Method for 2D Laplace/Possion eq (maybe 3D if I have time
-but I understand that this is not far from the 2D case).
+Multigrid Method for 2D Laplace/Possion eq, possibly 3D (a simple extension).
 
-First I plan on implementing a serial version. 
-Then exploring what kind of speedup is achieveable using openMP,MPI & definitely GPUs/Cuda.
-I would definitely like to deploy some code to Stampede and see
-how much speedup is available in that environment. 
-
-I do not have a partner for this project. I put a notice on piazza, but no one has reached out to me.
-I havent joined someone else's team since I feel I have a lot to learn 
-about multigrid methods (and I want to study this topic!!). I plan on doing this project alone as of now,
-which is entirely fine with me. I am a good C programmer (MSCS student). 
-So I feel like the only hurdle will be familiarizing myself with multigrid and
-parallelization techniques (which is the point!). 
+Todo:
+1. Implement Serial Code
+2. Explore speedup achieveable using openMP & MPI.
+3. Try to map the Kernel (relaxtion loops) to GPU for serial Code and examine speedup.
+4. Deploy to stampede for ~4k MPI Procs/tasks.
 
 
 
